@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Skrivanek Audit</title>
+        <link rel="stylesheet" href="themes/audit_theme.css" />
+  		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="jquery.mobile-1.4.2.css" />
+	    <script src="jquery-1.11.0.js" type="text/javascript"></script>
+	    <script src="jquery.mobile-1.4.2.js" type="text/javascript"></script>
+	    <link rel="stylesheet" type="text/css" href="style.css">
+	    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8"/>
+    </head>
+    <body>
+    	
+    	<div data-role="page" id="p0" data-theme='d'>
+        	
+        	    <div data-role="header" data-position="fixed" class="ui-bar">
+        			<h5 class='title'">PERSONAL INFO</h5>
+        		</div>
+        		
+        		<div class="short"> 
+        		<div class="ui-content"> 
+        			     
+        		<form method="get" action="" class="top">
+	        	<fieldset class="ui-field-contain">
+	        		<label for="name_field">Imię:</label>
+	        		<input type="text" name="name_field" id="name_field" value="">
+	        	</fieldset>	
+	        	<fieldset class="ui-field-contain">
+	        		<label for="surname_field">Nazwisko:</label>
+	        		<input type="email" name="surname_field" id="surname_field" value=""> 
+	        	</fieldset>	
+	            <fieldset class="ui-field-contain">
+		        	<label for="date_field">Data:</label>
+		        	<input type="date" name="date_field" id="date_field" value="">
+		        </fieldset>
+		        </form>
+		        
+		        
+        		<fieldset data-role="controlgroup" data-type="horizontal" class="ui-field-contain">
+        			<legend>Płeć:</legend>
+		        	<label for="radio1">M</label>   
+		        	<input type="radio" name="radio" id="radio1">
+		        	<label for="radio2">K</label>
+		        	<input type="radio" name="radio" id="radio2">
+        		</fieldset>
+
+				</div>
+				</div> 
+        		
+        	    <div data-role="footer" data-position="fixed" class="ui-bar">
+        			<a href="#p1" data-transition="slide" class="ui-btn ui-icon-arrow-r ui-btn-icon-right">WRITING</a>
+        		</div>
+       </div>
+       
+    	
+        <div data-role="page" id="p1" data-theme='d'>
+        	
+        	    <div data-role="header" data-position="fixed" class="ui-bar">
+        			<h5 class="title">WRITING</h5>
+        		</div>
+        		
+        		<form class="ui-content" style="margin-left:50px">
+
+        				<legend><h3 class="top" style="padding-bottom:15px">POINTS:</h3></legend>
+			            <fieldset data-role="controlgroup" data-type="horizontal" class="ui-field-contain">
+			           	<legend>Czas i dzień:</legend>
+				        	<label for="radio1">0</label>
+				        	<input type="radio" name="radio_first" class="radio_points" id="radio1">
+				        	<label for="radio2">1</label>
+				        	<input type="radio" name="radio_first" class="radio_points" id="radio2">
+				            <label for="radio3">2</label>
+				        	<input type="radio" name="radio_first" class="radio_points" id="radio3">
+			           </fieldset>
+			           <fieldset data-role="controlgroup" data-type="horizontal" class="ui-field-contain">
+			           <legend>Ilość dni pobytu:</legend>
+				        	<label for="radio4">0</label>
+				        	<input type="radio" name="radio_second" class="radio_points" id="radio4">
+				        	<label for="radio5">1</label>
+				        	<input type="radio" name="radio_second" class="radio_points" id="radio5">
+				            <label for="radio6">2</label>
+				        	<input type="radio" name="radio_second" class="radio_points" id="radio6">
+			           </fieldset>
+			           <fieldset data-role="controlgroup" data-type="horizontal" class="ui-field-contain">
+			           <legend>Rodzaj pokoju:</legend>
+				        	<label for="radio7">0</label>
+				        	<input type="radio" name="radio_third" class="radio_points" id="radio7">
+				        	<label for="radio8">1</label>
+				        	<input type="radio" name="radio_third" class="radio_points" id="radio8">
+				            <label for="radio9">2</label>
+				        	<input type="radio" name="radio_third" class="radio_points" id="radio9">
+			           </fieldset>
+			           <fieldset data-role="controlgroup" data-type="horizontal" class="ui-field-contain">
+			           <legend>Ilość osób:</legend>
+				        	<label for="radio10">0</label>
+				        	<input type="radio" name="radio_forth" class="radio_points" id="radio10">
+				        	<label for="radio11">1</label>
+				        	<input type="radio" name="radio_forth" class="radio_points" id="radio11">
+				            <label for="radio12">2</label>
+				        	<input type="radio" name="radio_forth" class="radio_points" id="radio12">
+			           </fieldset>
+			           <fieldset data-role="controlgroup" data-type="horizontal" class="ui-field-contain">
+			           <legend>Posiłki:</legend>
+				        	<label for="radio13">0</label>
+				        	<input type="radio" name="radio_fifth" class="radio_points" id="radio13">
+				        	<label for="radio14">1</label>
+				        	<input type="radio" name="radio_fifth" class="radio_points" id="radio14">
+				            <label for="radio15">2</label>
+				        	<input type="radio" name="radio_fifth" class="radio_points" id="radio15">
+			           </fieldset>
+
+
+					<fieldset style="margin-top:60px; margin-bottom:20px">
+        				<legend><h3 class="top" style="padding-bottom:15px">COMMENTS:</h3></legend>
+						<div data-role="fieldcontain">
+							<label for="q11">Układ graficzny:</label>
+							<input type="checkbox" name="check_p1" id="q11" data-role="flipswitch">
+						</div>
+						<div data-role="fieldcontain">
+							<label for="q12">Części składowe:</label>
+							<input type="checkbox" name="check_p1" id="q12" data-role="flipswitch">
+						</div>
+					    <div data-role="fieldcontain">
+							<label for="q13">Zwroty grzeczn:</label>
+							<input type="checkbox" name="check_p1" id="q13" data-role="flipswitch">
+						</div>
+						<div data-role="fieldcontain">
+							<label for="q14">Rejestr formalny:</label>
+							<input type="checkbox" name="check_p1" id="q14" data-role="flipswitch">
+						</div>
+					    <div data-role="fieldcontain">
+							<label for="q15">Słown/Gram:</label>
+							<input type="checkbox" name="check_p1" id="q15" data-role="flipswitch">
+						</div>
+		                <div data-role="fieldcontain">
+							<label for="q16">Komunikatywność:</label>
+							<input type="checkbox" name="check_p1" id="q16" data-role="flipswitch">
+						</div>
+					</fieldset>
+
+        	    </form>
+
+        	     
+        	    <div data-role="footer" data-position="fixed" class="ui-bar">
+        	    	<a href="#p0" data-transition="slide" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" data-direction="reverse">DATA</a>
+        			<a href="#p2" data-transition="slide" class="ui-btn ui-icon-arrow-r ui-btn-icon-right">SPEAKING</a>
+        		</div>
+       </div>
+       
+       <div data-role="page" id="p2" data-theme='d'>
+       		
+        	    <div data-role="header" data-position="fixed" class="ui-bar">
+        			<h5 class='title'>SPEAKING</h5>
+        		</div>
+        		 
+        		<div class="short"> 
+        	    <form class="ui-content">	
+        	    	
+        	    	<div class="ui-field-contain top" style="padding-bottom:30px">
+		        		<label for="range1">Suma punktów:</label>
+		        		<input type="range" name="range1" id="range1" value="15" min="0" max="30">
+        	    	</div>
+        	    	
+        	    	<fieldset class="ui-field-contain" style="padding-top:20px">
+        	    	<label for="gram_plus">Mocne strony:</label>
+        			<select id="gram_plus" name="gram_plus" data-native-menu="false" multiple="multiple">  
+	        			<option class="gram_plus" value="present simple">present simple</option>
+	        			<option class="gram_plus" value="past simple">past simple</option>
+	        			<option class="gram_plus" value="present perfect">present perfect</option>
+	        			<option class="gram_plus" value="wyrażaniem konieczności">have to</option>
+	        			<option class="gram_plus" value="trybami warunkowymi">gdybanie</option>
+	        			<option class="gram_plus" value="wyrażaniem preferencji">preferencje</option>
+	        			<option class="gram_plus" value="opisywaniem planów">plany</option>
+        			</select>
+        			</fieldset>
+        			
+        			<fieldset class="ui-field-contain">
+        			<label for="gram_minus">Słabe strony:</label>
+        			<select id="gram_minus" name="gram_minus" data-native-menu="false" multiple="multiple">  
+	        			<option class="gram_minus" value="present simple">present simple</option>
+	        			<option class="gram_minus" value="past simple">past simple</option>
+	        			<option class="gram_minus" value="present perfect">present perfect</option>
+	        			<option class="gram_minus" value="wyrażaniem konieczności">have to</option>
+	        			<option class="gram_minus" value="trybami warunkowymi">gdybanie</option>
+	        			<option class="gram_minus" value="wyrażaniem preferencji">preferencje</option>
+	        			<option class="gram_minus" value="opisywaniem planów">plany</option>
+        			</select>
+        			</fieldset>
+        	    	
+        			<fieldset style="margin-top:60px; margin-bottom:20px">
+        				<legend><h3 class="top" style="padding-bottom:10px">COMMENTS:</h3></legend>
+						<div data-role="fieldcontain">
+							<label for="q17">Płynność:</label>
+							<input type="checkbox" name="check_p2" id="q17" data-role="flipswitch">
+						</div>
+						<div data-role="fieldcontain">
+							<label for="q18">Długość:</label>
+							<input type="checkbox" name="check_p2" id="q18" data-role="flipswitch">
+						</div>
+						<div data-role="fieldcontain">
+							<label for="q19">Gram/Słown:</label>
+							<input type="checkbox" name="check_p2" id="q19" data-role="flipswitch">
+						</div>
+					</fieldset>
+        	    </form>
+        	    </div>
+        	
+        	    <div data-role="footer" data-position="fixed" class="ui-bar">
+        			<a href="#p1" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-left">WRITING</a>
+        			<a href="#p3" data-transition="slide" class="ui-btn ui-icon-arrow-r ui-btn-icon-right" id="report">REPORT</a>
+        		</div>
+        		
+       </div>
+       <div data-role="page" id="p3" data-theme='d'>
+       	
+       	        <div data-role="header" data-position="fixed" class="ui-bar">
+        			<h5 class='title'>REPORT</h5>
+        		</div>
+        		
+        		<div class="short">
+        		<form class="ui-content">	
+
+        			<h2 class="top" id="name_final" style="margin-bottom:-10px"></h2>
+        			<p id="date_final" style="font-size: 13px; margin-bottom: 20px"></p>
+        		
+	        	    <label for="wr_field" id="wr_label" class="top">Writing: </label>
+		            <textarea id="wr_field"></textarea>
+		            <label for="sp_field" id="sp_label" class="top">Speaking: </label>
+		            <textarea id="sp_field"></textarea>
+		            <label for="gen_field" class="top">General</label>
+		            <textarea id="gen_field"></textarea>
+        		
+        		</form>
+        		</div>
+
+        		<div data-role="footer" data-position="fixed" class="ui-bar">
+        			<a href="#p2" data-transition="slide" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" data-direction="reverse">SPEAKING</a>
+        			<a href="#" class="ui-btn ui-icon-refresh ui-btn-icon-right" id="refresh">REFRESH REPORT</a>
+        			<a href="#p0" class="ui-btn ui-icon-user ui-btn-icon-right" data-transition="fade" id="clear">NEW PERSON</a>
+        		</div>
+        		
+        		
+       </div>
+       
+    </body>
+    <script src="skr.js" type="text/javascript"></script>
+</html>
