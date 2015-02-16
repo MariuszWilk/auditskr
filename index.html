@@ -21,40 +21,40 @@
         		<div class="short"> 
         		<div class="ui-content"> 
         			     
-        		<form method="get" action="" class="top">
-	        	<fieldset class="ui-field-contain">
-	        		<label for="name_field">Imię:</label>
-	        		<input type="text" name="name_field" id="name_field" value="">
-	        	</fieldset>	
-	        	<fieldset class="ui-field-contain">
-	        		<label for="surname_field">Nazwisko:</label>
-	        		<input type="email" name="surname_field" id="surname_field" value=""> 
-	        	</fieldset>	
-	            <fieldset class="ui-field-contain">
-		        	<label for="date_field">Data:</label>
-		        	<input type="date" name="date_field" id="date_field" value="">
-		        </fieldset>
-		        </form>
-		        
-		        
-        		<fieldset data-role="controlgroup" data-type="horizontal" class="ui-field-contain">
-        			<legend>Płeć:</legend>
-		        	<label for="radio1">M</label>   
-		        	<input type="radio" name="radio" id="radio1">
-		        	<label for="radio2">K</label>
-		        	<input type="radio" name="radio" id="radio2">
-        		</fieldset>
+	        		<form method="get" action="" class="top">
+		        	<fieldset class="ui-field-contain">
+		        		<label for="name_field">Imię:</label>
+		        		<input type="text" name="name_field" id="name_field" value="">
+		        	</fieldset>	
+		        	<fieldset class="ui-field-contain">
+		        		<label for="surname_field">Nazwisko:</label>
+		        		<input type="email" name="surname_field" id="surname_field" value=""> 
+		        	</fieldset>	
+		            <fieldset class="ui-field-contain">
+			        	<label for="date_field">Data:</label>
+			        	<input type="date" name="date_field" id="date_field" value="">
+			        </fieldset>
+			        </form>
+			        
+			        
+	        		<fieldset data-role="controlgroup" data-mini="true" data-type="horizontal" class="ui-field-contain">
+	        			<legend>Płeć:</legend>
+			        	<label for="radio1">M</label>   
+			        	<input type="radio" name="radio" id="radio1">
+			        	<label for="radio2">K</label>
+			        	<input type="radio" name="radio" id="radio2">
+	        		</fieldset>
 
 				</div>
 				</div> 
         		
         	    <div data-role="footer" data-position="fixed" class="ui-bar">
-        			<a href="#p1" data-transition="slide" class="ui-btn ui-icon-arrow-r ui-btn-icon-right">WRITING</a>
+        			<a href="#p1" data-transition="slide" class="ui-btn ui-icon-arrow-r ui-btn-icon-right">LISTENING AND READING</a>
         		</div>
        </div>
        
     	
-        <div data-role="page" id="p1" data-theme='d'>
+        <div data-role="page" id="p2" data-theme='d'>
         	
         	    <div data-role="header" data-position="fixed" class="ui-bar">
         			<h5 class="title">WRITING</h5>
@@ -110,7 +110,7 @@
 			           </fieldset>
 
 
-					<fieldset style="margin-top:60px; margin-bottom:20px">
+					<fieldset style="margin-top:50px; margin-bottom:20px">
         				<legend><h3 class="top" style="padding-bottom:15px">COMMENTS:</h3></legend>
 						<div data-role="fieldcontain">
 							<label for="q11">Układ graficzny:</label>
@@ -142,12 +142,12 @@
 
         	     
         	    <div data-role="footer" data-position="fixed" class="ui-bar">
-        	    	<a href="#p0" data-transition="slide" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" data-direction="reverse">DATA</a>
-        			<a href="#p2" data-transition="slide" class="ui-btn ui-icon-arrow-r ui-btn-icon-right">SPEAKING</a>
+        	    	<a href="#p1" data-transition="slide" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" data-direction="reverse">LISTENING AND READING</a>
+        			<a href="#p3" data-transition="slide" class="ui-btn ui-icon-arrow-r ui-btn-icon-right">SPEAKING</a>
         		</div>
        </div>
        
-       <div data-role="page" id="p2" data-theme='d'>
+       <div data-role="page" id="p3" data-theme='d'>
        		
         	    <div data-role="header" data-position="fixed" class="ui-bar">
         			<h5 class='title'>SPEAKING</h5>
@@ -156,33 +156,40 @@
         		<div class="short"> 
         	    <form class="ui-content">	
         	    	
-        	    	<div class="ui-field-contain top" style="padding-bottom:30px">
-		        		<label for="range1">Suma punktów:</label>
-		        		<input type="range" name="range1" id="range1" value="15" min="0" max="30">
+        	    	<div class="ui-field-contain top" style="padding-bottom:40px">
+		        		<label for="range1" id="points_label">POINTS:</label>
+		        		<input type="range" name="range1" id="range1" value="1" min="0" max="30">
         	    	</div>
         	    	
         	    	<fieldset class="ui-field-contain" style="padding-top:20px">
+        	    	<legend><h3 class="top" style="padding-bottom:10px">SKILLS:</h3></legend>
         	    	<label for="gram_plus">Mocne strony:</label>
-        			<select id="gram_plus" name="gram_plus" data-native-menu="false" multiple="multiple">  
+        			<select id="gram_plus" name="gram_plus" data-native-menu="false" multiple="multiple" data-mini="true">  
 	        			<option class="gram_plus" value="present simple">present simple</option>
 	        			<option class="gram_plus" value="past simple">past simple</option>
 	        			<option class="gram_plus" value="present perfect">present perfect</option>
-	        			<option class="gram_plus" value="wyrażaniem konieczności">have to</option>
-	        			<option class="gram_plus" value="trybami warunkowymi">gdybanie</option>
+	        			<option class="gram_plus" value="wyrażaniem konieczności">konieczność</option>
 	        			<option class="gram_plus" value="wyrażaniem preferencji">preferencje</option>
+	        			<option class="gram_plus" value="dawaniem porad">porady</option>
+	        			<option class="gram_plus" value="przekonywaniem">perswadowanie</option>
+	        			<option class="gram_plus" value="uzasadnianiem poglądów">uzasadnianie</option>
+	        			<option class="gram_plus" value="trybami warunkowymi">przypuszczenia</option>
 	        			<option class="gram_plus" value="opisywaniem planów">plany</option>
         			</select>
         			</fieldset>
         			
         			<fieldset class="ui-field-contain">
         			<label for="gram_minus">Słabe strony:</label>
-        			<select id="gram_minus" name="gram_minus" data-native-menu="false" multiple="multiple">  
+        			<select id="gram_minus" name="gram_minus" data-native-menu="false" multiple="multiple" data-mini="true">  
 	        			<option class="gram_minus" value="present simple">present simple</option>
 	        			<option class="gram_minus" value="past simple">past simple</option>
 	        			<option class="gram_minus" value="present perfect">present perfect</option>
-	        			<option class="gram_minus" value="wyrażaniem konieczności">have to</option>
-	        			<option class="gram_minus" value="trybami warunkowymi">gdybanie</option>
+	        			<option class="gram_minus" value="wyrażaniem konieczności">konieczność</option>
 	        			<option class="gram_minus" value="wyrażaniem preferencji">preferencje</option>
+	        			<option class="gram_minus" value="dawaniem porad">porady</option>
+	        			<option class="gram_minus" value="przekonywaniem do swoich racji">perswadowanie</option>
+	        			<option class="gram_minus" value="uzasadnianiem poglądów">uzasadnianie</option>
+	        			<option class="gram_minus" value="trybami warunkowymi">przypuszczenia</option>
 	        			<option class="gram_minus" value="opisywaniem planów">plany</option>
         			</select>
         			</fieldset>
@@ -206,35 +213,90 @@
         	    </div>
         	
         	    <div data-role="footer" data-position="fixed" class="ui-bar">
-        			<a href="#p1" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-left">WRITING</a>
-        			<a href="#p3" data-transition="slide" class="ui-btn ui-icon-arrow-r ui-btn-icon-right" id="report">REPORT</a>
+        			<a href="#p2" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-left">WRITING</a>
+        			<a href="#p4" data-transition="slide" class="ui-btn ui-icon-arrow-r ui-btn-icon-right" id="report">REPORT</a>
         		</div>
         		
        </div>
-       <div data-role="page" id="p3" data-theme='d'>
+
+
+
+
+
+
+		<div data-role="page" id="p1" data-theme='d'>
+       		
+        	    <div data-role="header" data-position="fixed" class="ui-bar">
+        			<h5 class='title'>LISTENING AND READING</h5>
+        		</div>
+        		 
+        		<div class="very_short">
+        	    <form class="ui-content">	
+        	    	
+        	    	<legend><h3 class="top" style="padding-bottom:15px">LISTENING:</h3></legend>
+        	    	<div class="ui-field-contain">
+		        		<label for="range2">Łatwy [5]:</label>
+		        		<input type="range" name="range2" id="range2" value="1" min="0" max="5">
+        	    	</div>
+        	    	<div class="ui-field-contain" style="padding-bottom:30px">
+		        		<label for="range3">Trudny [10]:</label>
+		        		<input type="range" name="range3" id="range3" value="1" min="0" max="10">
+        	    	</div>
+
+        	    	<legend><h3 class="top" style="padding-bottom:15px">READING:</h3></legend>
+        	    	<div class="ui-field-contain">
+		        		<label for="range4">Łatwy [8]:</label>
+		        		<input type="range" name="range4" id="range4" value="1" min="0" max="8">
+        	    	</div>
+        	    	<div class="ui-field-contain" style="padding-bottom:30px">
+		        		<label for="range5">Trudny [5]:</label>
+		        		<input type="range" name="range5" id="range5" value="1" min="0" max="5">
+        	    	</div>
+
+        	    </form>	
+        	    </div>
+        	
+        	    <div data-role="footer" data-position="fixed" class="ui-bar">
+        			<a href="#p0" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-left">DATA</a>
+        			<a href="#p2" data-transition="slide" class="ui-btn ui-icon-arrow-r ui-btn-icon-right">WRITING</a>
+        		</div>
+
+        		
+       </div>
+
+
+
+
+
+       <div data-role="page" id="p4" data-theme='d'>
        	
        	        <div data-role="header" data-position="fixed" class="ui-bar">
         			<h5 class='title'>REPORT</h5>
         		</div>
         		
-        		<div class="short">
+        		<div class="short" style="padding-bottom:90px">
         		<form class="ui-content">	
 
         			<h2 class="top" id="name_final" style="margin-bottom:-10px"></h2>
-        			<p id="date_final" style="font-size: 13px; margin-bottom: 20px"></p>
-        		
+        			<p id="date_final" style="font-size: 13px; margin-bottom: 30px"></p>
+
+        		    <label for="ls_field" id="ls_label" class="top">Listening: </label>
+		            <textarea id="ls_field"></textarea>
+		            <label for="rd_field" id="rd_label" class="top">Reading: </label>
+		            <textarea id="rd_field"></textarea>
 	        	    <label for="wr_field" id="wr_label" class="top">Writing: </label>
 		            <textarea id="wr_field"></textarea>
 		            <label for="sp_field" id="sp_label" class="top">Speaking: </label>
 		            <textarea id="sp_field"></textarea>
-		            <label for="gen_field" class="top">General</label>
+
+		            <label for="gen_field" style="padding-top:50px">General</label>
 		            <textarea id="gen_field"></textarea>
         		
         		</form>
         		</div>
 
         		<div data-role="footer" data-position="fixed" class="ui-bar">
-        			<a href="#p2" data-transition="slide" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" data-direction="reverse">SPEAKING</a>
+        			<a href="#p3" data-transition="slide" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" data-direction="reverse">SPEAKING</a>
         			<a href="#" class="ui-btn ui-icon-refresh ui-btn-icon-right" id="refresh">REFRESH REPORT</a>
         			<a href="#p0" class="ui-btn ui-icon-user ui-btn-icon-right" data-transition="fade" id="clear">NEW PERSON</a>
         		</div>

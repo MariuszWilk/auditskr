@@ -179,6 +179,107 @@ $('input[name="check_p2"]').each(function() {
 var speaking_final = comment2;
 
 
+
+
+                       //~~~~~~~~~~~~~~ LISTENING AND READING~~~~~~~~~~~~~~~~~~//
+
+
+var listening_easy = {
+0 : "x nie jest w stanie udzielić żadnej poprawnej odpowiedzi na pytania dotyczące rozumienia ze słuchu.",
+1 : "x słabo radzi sobie z rozumieniem krótkich, nieskomplikowanych komunikatów i dialogów sytuacyjnych z życia codziennego i dopasowaniem ich do konkretnego miejsca.",
+2 : "x słabo radzi sobie z rozumieniem krótkich, nieskomplikowanych komunikatów i dialogów sytuacyjnych z życia codziennego i dopasowaniem ich do konkretnego miejsca.",
+3 : "x dość dobrze potrafi zrozumieć krótkie, nieskomplikowane komunikaty i dialogi sytuacyjne z życia codziennego  i dopasować je do konkretnego miejsca.",
+4 : "x dość dobrze potrafi zrozumieć krótkie, nieskomplikowane komunikaty i dialogi sytuacyjne z życia codziennego  i dopasować je do konkretnego miejsca.",
+5 :	"x potrafi zrozumieć krótkie, nieskomplikowane komunikaty i dialogi sytuacyjne z życia codziennego  i dopasować je do konkretnego miejsca." };
+
+var listening_hard = {
+0 : "x nie jest w stanie udzielić żadnej poprawnej odpowiedzi na pytania dotyczące rozumienia ze słuchu.",
+1 : "Nie potrafi natomiast zrozumieć dłuższej i bardziej złożonej wypowiedi ustnej oraz określić czy zdania na niej oparte są prawdziwe, czy fałszywe.",
+2 : "Nie potrafi natomiast zrozumieć dłuższej i bardziej złożonej wypowiedi ustnej oraz określić czy zdania na niej oparte są prawdziwe, czy fałszywe.",
+3 : "Niezbyt dobrze za to potrafi zrozumieć dłuższą i bardziej złożoną wypowiedź ustną oraz określić czy zdania na niej oparte są prawdziwe, czy fałszywe.",
+4 : "Niezbyt dobrze za to potrafi zrozumieć dłuższą i bardziej złożoną wypowiedź ustną oraz określić czy zdania na niej oparte są prawdziwe, czy fałszywe.",
+5 : "Średnio natomiast potrafi zrozumieć dłuższą i bardziej złożoną wypowiedź ustną oraz określić czy zdania na niej oparte są prawdziwe, czy fałszywe.",
+6 : "Średnio natomiast potrafi zrozumieć dłuższą i bardziej złożoną wypowiedź ustną oraz określić czy zdania na niej oparte są prawdziwe, czy fałszywe.",
+7 : "Potrafi również dość dobrze zrozumieć dłuższą i bardziej złożoną wypowiedź ustną oraz określić czy zdania na niej oparte są prawdziwe, czy fałszywe.",
+8 : "Potrafi również dość dobrze zrozumieć dłuższą i bardziej złożoną wypowiedź ustną oraz określić czy zdania na niej oparte są prawdziwe, czy fałszywe.",
+9 : "Potrafi również zrozumieć dłuższą i bardziej złożoną wypowiedź ustną oraz określić czy zdania na niej oparte są prawdziwe, czy fałszywe.",
+10 : "Potrafi również zrozumieć dłuższą i bardziej złożoną wypowiedź ustną oraz określić czy zdania na niej oparte są prawdziwe, czy fałszywe." };
+
+var reading_easy = {
+0 : ["x nie jest w stanie udzielić żadnej poprawnej odpowiedzi na pytania dotyczące", "x nie jest w stanie udzielić żadnej poprawnej odpowiedzi na pytania dotyczące", "przeczytanych tekstów."],
+1 : ["x słabo radzi sobie ze zrozumieniem prostszej wypowiedzi pisemnej.",  "x potrafi raczej słabo zrozumieć przeczytany tekst na tematy ogólne.",  
+    "Ma trudności z określeniem czy zdania oparte na tekście są prawdziwe czy fałszywe."],
+2 : ["x słabo radzi sobie ze zrozumieniem prostszej wypowiedzi pisemnej.",  "x potrafi raczej słabo zrozumieć przeczytany tekst na tematy ogólne.",  
+    "Ma kłopoty z określeniem czy zdania oparte na tekście są prawdziwe czy fałszywe."],
+3 : ["x średnio radzi sobie ze zrozumieniem prostszej wypowiedzi pisemnej.", "x potrafi średnio zrozumieć przeczytany tekst na tematy ogólne.",
+	"Ma kłopoty z określeniem czy zdania oparte na tekście są prawdziwe czy fałszywe."],
+4 : ["x średnio radzi sobie ze zrozumieniem prostszej wypowiedzi pisemnej.", "x potrafi średnio zrozumieć przeczytany tekst na tematy ogólne.",
+	"Ma kłopoty z określeniem czy zdania oparte na tekście są prawdziwe czy fałszywe."],
+5 : ["x dość dobrze radzi sobie ze zrozumieniem prostszej wypowiedzi pisemnej.", "x potrafi zrozumieć przeczytany tekst na tematy ogólne.",
+	"Nie ma większych trudności z określeniem czy zdania oparte na tekście są prawdziwe czy fałszywe."],
+6 : ["x dość dobrze radzi sobie ze zrozumieniem prostszej wypowiedzi pisemnej.", "x potrafi zrozumieć przeczytany tekst na tematy ogólne.",
+	"Nie ma dużych kłopotów z określeniem czy zdania oparte na tekście są prawdziwe czy fałszywe."],
+7 : ["x bardzo dobrze radzi sobie ze zrozumieniem prostszej wypowiedzi pisemnej.", "x potrafi bardzo dobrze rozumieć przeczytany tekst na tematy ogólne.",
+    "Nie ma kłopotów z określeniem czy zdania oparte na tekście są prawdziwe czy fałszywe."],
+8 : ["x bardzo dobrze radzi sobie ze zrozumieniem prostszej wypowiedzi pisemnej.", "x potrafi bardzo dobrze rozumieć przeczytany tekst na tematy ogólne.",
+    "Nie ma kłopotów z określeniem czy zdania oparte na tekście są prawdziwe czy fałszywe."] };
+
+var reading_hard = {
+0 : ["x nie jest w stanie udzielić żadnej poprawnej odpowiedzi na pytania dotyczące", "x nie jest w stanie udzielić żadnej poprawnej odpowiedzi na pytania dotyczące", "przeczytanych tekstów."],
+1 : ["x niezbyt dobrze radzi sobie z rozumieniem dłuższego i bardziej złożonego tekstu.", "x nie potrafi zbyt dobrze zrozumieć ogólnego sensu dłuższej i bardziej złożonej leksykalnie wypowiedzi pisemnej.",
+	"Potrafi jedynie częściowo wyszukać w tekście konkretne informacje i wyciągnąć z nich wnioski."],
+2 : ["x niezbyt dobrze radzi sobie z rozumieniem dłuższego i bardziej złożonego tekstu.", "x nie potrafi zbyt dobrze zrozumieć ogólnego sensu dłuższej i bardziej złożonej leksykalnie wypowiedzi pisemnej.",
+	"Potrafi jedynie częściowo wyszukać w tekście konkretne informacje i wyciągnąć z nich wnioski."],
+3 : ["x średnio radzi sobie z rozumieniem dłuższego i bardziej złożonego tekstu.", "x  potrafi w pewnym stopniu zrozumieć ogólny sens dłuższej i bardziej złożonej leksykalnie wypowiedzi pisemnej.",
+	"Potrafi jedynie częściowo wyszukać w tekście konkretne informacje i wyciągnąć z nich wnioski."],
+4 : ["x bardzo dobrze radzi sobie z rozumieniem dłuższego i bardziej złożonego tekstu.", "x potrafi zrozumieć ogólny sens dłuższej i bardziej złożonej leksykalnie wypowiedzi pisemnej.",
+	"Potrafi wyszukać w tekście konkretne informacje i wyciągnąć z nich wnioski."],
+5 : ["x bardzo dobrze radzi sobie z rozumieniem dłuższego i bardziej złożonego tekstu.", "x potrafi zrozumieć ogólny sens dłuższej i bardziej złożonej leksykalnie wypowiedzi pisemnej.",
+	"Potrafi wyszukać w tekście konkretne informacje i wyciągnąć z nich wnioski."] };
+
+
+var mister = "";
+
+if ($('#radio1').is(':checked')) {
+	mister = "Pan " + $("#name_field").val();
+} else if ($('#radio2').is(':checked')) {
+	mister = "Pani " + $("#name_field").val();
+} else {
+	mister = "< PLEASE DECLARE SEX IN DATA >";
+};
+
+var mister_replace = /x/gi;
+
+var l_easy = $('#range2').val();
+var l_hard = $('#range3').val();
+var comment_list = listening_easy[l_easy] + " " + listening_hard[l_hard];
+
+if ((l_easy === "0") && (l_hard === "0")) {
+	comment_list = listening_easy[l_easy];
+};
+
+var listening_final = comment_list.replace(mister_replace, mister);
+console.log(listening_final)
+
+
+
+var r_easy = $('#range4').val();
+var r_hard = $('#range5').val();
+
+random_number1 = Math.floor((Math.random() * 2));
+random_number2 = Math.floor((Math.random() * 2));
+
+var comment_read = reading_easy[r_easy][random_number1] + " " + reading_easy[r_easy][2] + " " + reading_hard[r_hard][random_number2] + " " + reading_hard[r_hard][2];
+
+if ((r_easy === "0") && (r_hard === "0")) {
+	comment_read = reading_easy[r_easy][random_number1] + " " + reading_easy[r_easy][2];
+};
+
+
+var reading_final = comment_read.replace(mister_replace, mister);
+console.log(reading_final);
+
+
                        //~~~~~~~~~~~~~~ GENERAL ~~~~~~~~~~~~~~~~~~//
  
 var dict_gen10_gram = ["popracować nad najbardziej podstawowymi zagadnieniami gramatycznymi oraz ", "skupić się na przyswojeniu sobie bardzo podstawowej gramatyki i ", 
@@ -213,9 +314,9 @@ var rand3 =	Math.floor((Math.random() * 3));
 
 
 if ($('#radio1').is(':checked')) {
-	comment3 = "Pan " + $("#name_field").val() + " " + $("#surname_field").val() + " powinien " ;
+	comment3 = "Pan " + $("#name_field").val() + " powinien " ;
 } else if ($('#radio2').is(':checked')) {
-	comment3 = "Pani " + $("#name_field").val() + " " + $("#surname_field").val() + " powinna " ;
+	comment3 = "Pani " + $("#name_field").val() +  " powinna " ;
 } else {
 	comment3 = "< PLEASE DECLARE SEX IN DATA > ";
 }
@@ -253,13 +354,20 @@ var general_final = comment3;
 
 document.getElementById('wr_label').innerHTML = "Writing: " + total;
 document.getElementById('wr_label').innerHTML += " pkt";
-document.getElementById('sp_label').innerHTML = "Speaking: " + document.getElementById("range1").value;
+document.getElementById('sp_label').innerHTML = "Speaking: " + $('#range1').val();
 document.getElementById('sp_label').innerHTML += " pkt";
+
+document.getElementById('ls_label').innerHTML = "Listening: " + (parseInt($('#range2').val()) + parseInt($('#range3').val()));
+document.getElementById('ls_label').innerHTML += " pkt";
+document.getElementById('rd_label').innerHTML = "Reading: " + (parseInt($('#range4').val()) + parseInt($('#range5').val()));
+document.getElementById('rd_label').innerHTML += " pkt";
 
 $('#name_final').text($("#name_field").val() + " " + $("#surname_field").val());
 $('#date_final').text($('#date_field').val());
 $('#wr_field').val(writing_final);
 $('#sp_field').val(speaking_final);
+$('#ls_field').val(listening_final);
+$('#rd_field').val(reading_final);
 $('#gen_field').val(general_final);
 
 });

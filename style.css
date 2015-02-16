@@ -12,3 +12,16 @@
     color: #c4dfe9;
 }
 
+.very_short {
+	max-width: 600px;
+	margin-left: 50px;
+}
+
+
+#points_label { 
+    font-weight: bold;
+    font-size: 1.17em;
+    margin-top: 1px;
+}
+
+
