@@ -319,7 +319,7 @@ if ($('#radio1').is(':checked')) {
 	comment3 = "Pani " + $("#name_field").val() +  " powinna " ;
 } else {
 	comment3 = "< PLEASE DECLARE SEX IN DATA > ";
-}
+};
 
 if ($('#range1').val() < 11) {
     comment3 += dict_gen10_gram[rand1];
@@ -374,9 +374,10 @@ $('#gen_field').val(general_final);
 
 
 
-$("#clear").click(function() {
-   location.reload();
-});
+//$("#clear").click(function() {
+   // location.reload();
+//   window.location = "http://szostakowicz.github.io/auditskr/";
+//});
 
 
 
