@@ -194,8 +194,8 @@ var listening_easy = {
 
 var listening_hard = {
 0 : "x nie jest w stanie udzielić żadnej poprawnej odpowiedzi na pytania dotyczące rozumienia ze słuchu.",
-1 : "Nie potrafi natomiast zrozumieć dłuższej i bardziej złożonej wypowiedi ustnej oraz określić czy zdania na niej oparte są prawdziwe, czy fałszywe.",
-2 : "Nie potrafi natomiast zrozumieć dłuższej i bardziej złożonej wypowiedi ustnej oraz określić czy zdania na niej oparte są prawdziwe, czy fałszywe.",
+1 : "Nie potrafi natomiast zrozumieć dłuższej i bardziej złożonej wypowiedzi ustnej oraz określić czy zdania na niej oparte są prawdziwe, czy fałszywe.",
+2 : "Nie potrafi natomiast zrozumieć dłuższej i bardziej złożonej wypowiedzi ustnej oraz określić czy zdania na niej oparte są prawdziwe, czy fałszywe.",
 3 : "Niezbyt dobrze za to potrafi zrozumieć dłuższą i bardziej złożoną wypowiedź ustną oraz określić czy zdania na niej oparte są prawdziwe, czy fałszywe.",
 4 : "Niezbyt dobrze za to potrafi zrozumieć dłuższą i bardziej złożoną wypowiedź ustną oraz określić czy zdania na niej oparte są prawdziwe, czy fałszywe.",
 5 : "Średnio natomiast potrafi zrozumieć dłuższą i bardziej złożoną wypowiedź ustną oraz określić czy zdania na niej oparte są prawdziwe, czy fałszywe.",
@@ -206,7 +206,8 @@ var listening_hard = {
 10 : "Potrafi również zrozumieć dłuższą i bardziej złożoną wypowiedź ustną oraz określić czy zdania na niej oparte są prawdziwe, czy fałszywe." };
 
 var reading_easy = {
-0 : ["x nie jest w stanie udzielić żadnej poprawnej odpowiedzi na pytania dotyczące", "x nie jest w stanie udzielić żadnej poprawnej odpowiedzi na pytania dotyczące", "przeczytanych tekstów."],
+0 : ["x nie jest w stanie udzielić żadnej poprawnej odpowiedzi na pytania dotyczące", "x nie jest w stanie udzielić żadnej poprawnej odpowiedzi na pytania dotyczące", 
+     "przeczytanych tekstów."],
 1 : ["x słabo radzi sobie ze zrozumieniem prostszej wypowiedzi pisemnej.",  "x potrafi raczej słabo zrozumieć przeczytany tekst na tematy ogólne.",  
     "Ma trudności z określeniem czy zdania oparte na tekście są prawdziwe czy fałszywe."],
 2 : ["x słabo radzi sobie ze zrozumieniem prostszej wypowiedzi pisemnej.",  "x potrafi raczej słabo zrozumieć przeczytany tekst na tematy ogólne.",  
@@ -225,7 +226,8 @@ var reading_easy = {
     "Nie ma kłopotów z określeniem czy zdania oparte na tekście są prawdziwe czy fałszywe."] };
 
 var reading_hard = {
-0 : ["x nie jest w stanie udzielić żadnej poprawnej odpowiedzi na pytania dotyczące", "x nie jest w stanie udzielić żadnej poprawnej odpowiedzi na pytania dotyczące", "przeczytanych tekstów."],
+0 : ["x nie jest w stanie udzielić żadnej poprawnej odpowiedzi na pytania dotyczące", "x nie jest w stanie udzielić żadnej poprawnej odpowiedzi na pytania dotyczące", 
+     "przeczytanych tekstów."],
 1 : ["x niezbyt dobrze radzi sobie z rozumieniem dłuższego i bardziej złożonego tekstu.", "x nie potrafi zbyt dobrze zrozumieć ogólnego sensu dłuższej i bardziej złożonej leksykalnie wypowiedzi pisemnej.",
 	"Potrafi jedynie częściowo wyszukać w tekście konkretne informacje i wyciągnąć z nich wnioski."],
 2 : ["x niezbyt dobrze radzi sobie z rozumieniem dłuższego i bardziej złożonego tekstu.", "x nie potrafi zbyt dobrze zrozumieć ogólnego sensu dłuższej i bardziej złożonej leksykalnie wypowiedzi pisemnej.",
@@ -282,30 +284,34 @@ console.log(reading_final);
 
                        //~~~~~~~~~~~~~~ GENERAL ~~~~~~~~~~~~~~~~~~//
  
-var dict_gen10_gram = ["popracować nad najbardziej podstawowymi zagadnieniami gramatycznymi oraz ", "skupić się na przyswojeniu sobie bardzo podstawowej gramatyki i ", 
-                "przede wszystkim przyswoić sobie gramatykę na bardzo podstawowym poziomie oraz "];                      
-                       
-var dict_gen20_gram = ["popracować nad gramatycznością swoich wypowiedzi oraz ", "skupić się na przyswojeniu podstawowych zagadnień gramatycznych oraz ", 
-                "przede wszystkim przyswoić sobie najczęściej używane struktury gramatyczne i "];
-                
-var dict_gen30_gram = ["popracować nad udoskonaleniem gramatyki oraz ", "skupić się na przyswojeniu sobie bardziej zaawansowanych zagadnień gramatycznych oraz ", 
+var dict_gen10_gram = ["popracować nad najbardziej podstawowymi zagadnieniami gramatycznymi oraz ", 
+                "skupić się na przyswojeniu sobie bardzo podstawowej gramatyki i ", 
+                "przede wszystkim przyswoić sobie gramatykę na bardzo podstawowym poziomie oraz "];                                           
+var dict_gen20_gram = ["popracować nad gramatycznością swoich wypowiedzi oraz ", 
+                "skupić się na przyswojeniu podstawowych zagadnień gramatycznych oraz ", 
+                "przede wszystkim przyswoić sobie najczęściej używane struktury gramatyczne i "];               
+var dict_gen30_gram = ["popracować nad udoskonaleniem gramatyki oraz ", 
+                "skupić się na przyswojeniu sobie bardziej zaawansowanych zagadnień gramatycznych oraz ", 
                 "przyswoić sobie nieco rzadziej używane struktury gramatyczne i "];
        
         
-var dict_gen10_slow = ["zaznajomić się z prostym słownictwem i popularnymi wyrażeniami. ", "nakierować swoją uwagę na najczęsciej używane słownioctwo. ",
-                "uzupełnić braki w najbardziej fundamentalnym słownictwie. "];
-                
+var dict_gen10_slow = ["zaznajomić się z prostym słownictwem i popularnymi wyrażeniami. ", 
+                "nakierować swoją uwagę na najczęsciej używane słownioctwo. ",
+                "uzupełnić braki w najbardziej fundamentalnym słownictwie. "];              
 var dict_gen20_slow = ["zaznajomić się z średnio zaawansowanym słownictwem i często występującymi wyrażeniami. ", 
-                "nakierować swoją uwagę na słownictwo które często pojawia się w codziennych rozmowach. ", "uzupełnić braki w słownictwie o poziomie ponad-podstawowym. "];
-                
-var dict_gen30_slow = ["zaznajomić się z trudniejszym słownictwem i mniej popularnymi wyrażeniami. ", "nakierować swoją uwagę na bardziej specjalistyczne słownictwo. ",
+                "nakierować swoją uwagę na słownictwo które często pojawia się w codziennych rozmowach. ", 
+                "uzupełnić braki w słownictwie o poziomie ponad-podstawowym. "];              
+var dict_gen30_slow = ["zaznajomić się z trudniejszym słownictwem i mniej popularnymi wyrażeniami. ", 
+                "nakierować swoją uwagę na bardziej specjalistyczne słownictwo. ",
                 "jeszcze udoskonalić słownictwo, już w tej chwili na dobrym poziomie. "];
                 
 
-var dict_gen_polite_plus = ["W pisowni są używane zwroty grzecznościowe tam gdzie wymaga tego konwencja. ", "Pisemna korespondancja zawiara formy grzecznościowe i zwroty formalne. ", 
+var dict_gen_polite_plus = ["W pisowni są używane zwroty grzecznościowe tam gdzie wymaga tego konwencja. ", 
+                 "Pisemna korespondancja zawiara formy grzecznościowe i zwroty formalne. ", 
                  "W piśmie występują odpowiednie zwroty grzecznościowe. "];
 var dict_gen_polite_minus = ["Warto byłoby przyswoić sobie więcej zwrotów grzecznościowych oraz bardziej formalny język. ", 
-                 "Przyswojenie sobie większej ilości zwrotów grzecznościowych znacznie poprawiłoby poziom korespondencji. ", "Pisemne wypowiedzi wymagają dopracowania; doradzam poznanie nowych i często używanych form grzecznościowych. "];
+                 "Przyswojenie sobie większej ilości zwrotów grzecznościowych znacznie poprawiłoby poziom korespondencji. ", 
+                 "Pisemne wypowiedzi wymagają dopracowania; doradzam poznanie nowych i często używanych form grzecznościowych. "];
 
 
 var rand1 =	Math.floor((Math.random() * 3));
