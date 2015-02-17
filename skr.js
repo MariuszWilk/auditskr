@@ -378,12 +378,17 @@ $('#gen_field').val(general_final);
 
 });
 
+//<button onclick="setTimeout(function(){alert('Hello')},3000);">
+//Try it</button>
+
+$("#clear").click(function() {
+   window.location = "http://szostakowicz.github.io/auditskr/";	
+ //  setTimeout(function(){
+ //  	   location.reload();
+ //  },500);
+});
 
 
-//$("#clear").click(function() {
-   // location.reload();
-//   window.location = "http://szostakowicz.github.io/auditskr/";
-//});
 
 
 
