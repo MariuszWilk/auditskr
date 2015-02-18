@@ -381,7 +381,8 @@ $('#gen_field').val(general_final);
 //<button onclick="setTimeout(function(){alert('Hello')},3000);">
 //Try it</button>
 
-$("#clear_page").click(function() {	
+$("#clear").click(function() {	
+	window.location = "szostakowicz.github.io/auditskr/";
   	document.location.reload(true);
 });
 
