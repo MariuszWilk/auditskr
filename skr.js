@@ -381,10 +381,10 @@ $('#gen_field').val(general_final);
 //<button onclick="setTimeout(function(){alert('Hello')},3000);">
 //Try it</button>
 
-$("#clear").click(function() {
-   window.location = "http://szostakowicz.github.io/auditskr/";	
- //  setTimeout(function(){
- //  	   location.reload();
+$("#clear_page").click(function() {
+//  window.location = "http://szostakowicz.github.io/auditskr/";	
+  	location.reload();
+  	console.log("reload");
  //  },500);
 });
 
