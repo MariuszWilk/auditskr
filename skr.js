@@ -23,7 +23,7 @@ var connect = ["Jednakże ", "Jednak ", "Jakkolwiek ", "Niemniej jednak ", "Z dr
 
 var dict_minus = {
 	'q11': ["Układ graficzny nie jest odpowiedni dla konwencji maila. ", "Mail nie zachowuje odpowiedniego ukłądu graficznego. ", 
-	"Układ graficzny nie jest odpowiedni. ", "Mail napisany jest bes zachowania stosownego układu graficznego. ", "Nie jest zachowany odpowiedni układ graficzny. "],
+	"Układ graficzny nie jest odpowiedni. ", "Mail napisany jest bez zachowania stosownego układu graficznego. ", "Nie jest zachowany odpowiedni układ graficzny. "],
 	
 	'q12': ["Tekst nie ma początku, części głównej i zakończenia. ", "Przekaz nie jest przejrzysty; nie ma wyraźnego początku, części głównej i zakończenia. ", "Tekst nie jest podzielony na odpowiednie części. ", 
 	"Przekaz nie ma odpowiednich części składowych. ", "Wiadomości brakuje podziału na wyraźne części składowe. "],
@@ -91,20 +91,20 @@ $('input[name="check_p1"]:checked').each(function() {
    var dict_prop = $(this).attr('id');
    var sent = dict_plus[dict_prop][random_nr];
    comment += sent;
-   mail_adv = "yes";
+   mail_adv = "pos";
 });
 
 
 $('input[name="check_p1"]:not(:checked)').each(function() {
-   if (mail_adv === "yes") {
-	var random = Math.floor((Math.random() * 5));
-	comment += connect[random];
-	mail_adv = "no";
+   if (mail_adv === "pos") {
+	   var random = Math.floor((Math.random() * 5));
+	   comment += connect[random];
+	   mail_adv = "con";
    };
    var random_nr =	Math.floor((Math.random() * 5));
    var dict_prop = $(this).attr('id');
    var sent = dict_minus[dict_prop][random_nr];
-   if ((count === 0) && (mail_adv === "yes")){
+   if ((count === 0) && (mail_adv === "con")){
    	comment += sent.toLowerCase();
    } else {
    comment += sent;
