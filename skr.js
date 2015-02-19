@@ -94,12 +94,17 @@ $('input[name="check_p1"]:checked').each(function() {
    mail_adv = "yes";
 });
 
-if (mail_adv === "yes") {
-	var random = Math.floor((Math.random() * 5));
-	comment += connect[random];
-};
+//if (mail_adv === "yes") {
+//	var random = Math.floor((Math.random() * 5));
+//	comment += connect[random];
+//};
 
 $('input[name="check_p1"]:not(:checked)').each(function() {
+   if (mail_adv === "yes") {
+	var random = Math.floor((Math.random() * 5));
+	comment += connect[random];
+	mail_adv = "no";
+   };
    var random_nr =	Math.floor((Math.random() * 5));
    var dict_prop = $(this).attr('id');
    var sent = dict_minus[dict_prop][random_nr];
