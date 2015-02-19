@@ -94,10 +94,6 @@ $('input[name="check_p1"]:checked').each(function() {
    mail_adv = "yes";
 });
 
-//if (mail_adv === "yes") {
-//	var random = Math.floor((Math.random() * 5));
-//	comment += connect[random];
-//};
 
 $('input[name="check_p1"]:not(:checked)').each(function() {
    if (mail_adv === "yes") {
@@ -287,7 +283,6 @@ if ((l_easy === "0") && (l_hard === "0")) {
 };
 
 var listening_final = comment_list.replace(mister_replace, mister);
-console.log(listening_final)
 
 
 
@@ -305,7 +300,6 @@ if ((r_easy === "0") && (r_hard === "0")) {
 
 
 var reading_final = comment_read.replace(mister_replace, mister);
-console.log(reading_final);
 
 
                        //~~~~~~~~~~~~~~ GENERAL ~~~~~~~~~~~~~~~~~~//
@@ -404,10 +398,9 @@ $('#gen_field').val(general_final);
 
 });
 
-//<button onclick="setTimeout(function(){alert('Hello')},3000);">
-//Try it</button>
 
-$("#clear_page").click(function() {	
+$("#clear").click(function() {
+    window.location.hash = 'p0';	
   	document.location.reload(true);
 });
 
