@@ -31,7 +31,7 @@ var dict_minus = {
     'q13': ["Nie są stosowane zwroty grzecznościowe. ", "Zwroty grzecznościowe nie są prawidłowo zastosowane. ", "Nie występują odpowiednie zwroty grzecznościowe. ", 
     "Mail nie zawiera odpowiednich dla konwencji zwrotów grzecznościowych. ", "W mailu zabrakło odpowiednich zwrotów grzecznościowych. "],
     
-	'q14': ["Nie jest zachowany rejetr formalny. ", "Język użyty w wypowiedzi jest nieformalny. ", "Rejestr wypowiedzi jest nieformalny, wbrew wymaganej konwencji. ", 
+	'q14': ["Nie jest zachowany rejestr formalny. ", "Język użyty w wypowiedzi jest nieformalny. ", "Rejestr wypowiedzi jest nieformalny, wbrew wymaganej konwencji. ", 
 	"Wypowiedź nie ma rejestru wystarczająco formalnego. ", "Tekst napisany jest w nieformalny sposób. " ],
 	
 	'q15': ["Słownictwo i gramatyka stoją na niskim poziomie. ", "Gramatyka nie jest stosowana prawidłowo, a słownictwo jest bardzo proste. ", "Gramatyka nie jest prawidłowa, a słownictwo raczej podstawowe. ",
@@ -207,9 +207,9 @@ var listening_hard = {
 2 : ["Ma kłopoty ze zrozumieniem dłuższej i bardziej złożonej wypowiedzi ustnej oraz określeniem prawdziwości zdań które jej dotyczą",
      "Nie potrafi zrozumieć skomplikowanej i dłuższej wypowiedzi ustnej oraz określić czy zdania na niej oparte są prawdziwe czy fałszywe."],
 3 : ["Ma pewne kłopoty ze zrozumieniem dłuższej i bardziej złożonej wypowiedzi ustnej oraz określeniem prawdziwości zdań które jej dotyczą",
-     "Niezbyt dobrze potrafi zrozumieć złożonej i dłuższej wypowiedzi ustnej oraz określić czy zdania na niej oparte są prawdziwe czy fałszywe."],
+     "Niezbyt dobrze potrafi zrozumieć złożoną i dłuższą wypowiedź ustną oraz określić czy zdania na niej oparte są prawdziwe czy fałszywe."],
 4 : ["Ma pewne kłopoty ze zrozumieniem dłuższej i bardziej złożonej wypowiedzi ustnej oraz określeniem prawdziwości zdań które jej dotyczą.",
-     "Niezbyt dobrze potrafi zrozumieć złożonej i dłuższej wypowiedzi ustnej oraz określić czy zdania na niej oparte są prawdziwe czy nie."],
+     "Niezbyt dobrze potrafi zrozumieć złożoną i dłuższą wypowiedź ustną oraz określić czy zdania na niej oparte są prawdziwe czy nie."],
 5 : ["Zrozumienie dłuższej i bardziej złożonej wypowiedzi stoi na średnim poziomie, podobnie jak określenie czy oparte na niej zdania są prawdziwe.",
      "Rozumienie złożonej i długiej wypowiedzi ustnej oraz określenie czy zdania na niej oparte są prawdziwe czy nie stoi na średnio-zaawansowanym poziomie."],
 6 : ["Zrozumienie dłuższej i bardziej złożonej wypowiedzi stoi na średnim poziomie, podobnie jak określenie czy oparte na niej zdania są prawdziwe.",
@@ -238,24 +238,24 @@ var reading_easy = {
 	"Nie ma większych trudności z określeniem czy zdania oparte na tekście są prawdziwe czy fałszywe."],
 6 : ["x dość dobrze radzi sobie ze zrozumieniem prostszej wypowiedzi pisemnej.", "x potrafi zrozumieć przeczytany tekst na tematy ogólne.",
 	"Nie ma dużych kłopotów z określeniem czy zdania oparte na tekście są prawdziwe czy fałszywe."],
-7 : ["x bardzo dobrze radzi sobie ze zrozumieniem prostszej wypowiedzi pisemnej.", "x potrafi bardzo dobrze rozumieć przeczytany tekst na tematy ogólne.",
+7 : ["x bardzo dobrze radzi sobie ze zrozumieniem prostszej wypowiedzi pisemnej.", "x potrafi bardzo dobrze zrozumieć przeczytany tekst na tematy ogólne.",
     "Nie ma kłopotów z określeniem czy zdania oparte na tekście są prawdziwe czy fałszywe."],
-8 : ["x bardzo dobrze radzi sobie ze zrozumieniem prostszej wypowiedzi pisemnej.", "x potrafi bardzo dobrze rozumieć przeczytany tekst na tematy ogólne.",
+8 : ["x bardzo dobrze radzi sobie ze zrozumieniem prostszej wypowiedzi pisemnej.", "x bardzo dobrze rozumie przeczytany tekst na tematy ogólne.",
     "Nie ma kłopotów z określeniem czy zdania oparte na tekście są prawdziwe czy fałszywe."] };
 
 var reading_hard = {
 0 : ["Nie jest w stanie udzielić żadnej poprawnej odpowiedzi na pytania dotyczące", "Nie jest w stanie udzielić żadnej poprawnej odpowiedzi na pytania dotyczące", 
      "bardziej zaawansowanych tekstów."],
-1 : ["x niezbyt dobrze radzi sobie z rozumieniem dłuższego i bardziej złożonego tekstu.", "Nie potrafi zbyt dobrze zrozumieć ogólnego sensu dłuższej i bardziej złożonej leksykalnie wypowiedzi pisemnej.",
-	"Potrafi jedynie częściowo wyszukać w tekście konkretne informacje i wyciągnąć z nich wnioski."],
+1 : ["x niezbyt dobrze radzi sobie z rozumieniem dłuższego i bardziej złożonego tekstu oraz", "Nie potrafi zbyt dobrze zrozumieć ogólnego sensu dłuższej i bardziej złożonej leksykalnie wypowiedzi pisemnej oraz",
+	"potrafi jedynie częściowo wyszukać w tekście konkretne informacje i wyciągnąć z nich wnioski."],
 2 : ["x niezbyt dobrze radzi sobie z rozumieniem dłuższego i bardziej złożonego tekstu.", "x nie potrafi zbyt dobrze zrozumieć ogólnego sensu dłuższej i bardziej złożonej leksykalnie wypowiedzi pisemnej.",
 	"Potrafi jedynie częściowo wyszukać w tekście konkretne informacje i wyciągnąć z nich wnioski."],
 3 : ["Średnio radzi sobie z rozumieniem dłuższego i bardziej złożonego tekstu.", "x  potrafi w pewnym stopniu zrozumieć ogólny sens dłuższej i bardziej złożonej leksykalnie wypowiedzi pisemnej.",
 	"Potrafi jedynie częściowo wyszukać w tekście konkretne informacje i wyciągnąć z nich wnioski."],
 4 : ["Bardzo dobrze radzi sobie z rozumieniem dłuższego i bardziej złożonego tekstu.", "x potrafi zrozumieć ogólny sens dłuższej i bardziej złożonej leksykalnie wypowiedzi pisemnej.",
 	"Potrafi wyszukać w tekście konkretne informacje i wyciągnąć z nich wnioski."],
-5 : ["x bardzo dobrze radzi sobie z rozumieniem dłuższego i bardziej złożonego tekstu.", "x potrafi zrozumieć ogólny sens dłuższej i bardziej złożonej leksykalnie wypowiedzi pisemnej.",
-	"Potrafi wyszukać w tekście konkretne informacje i wyciągnąć z nich wnioski."] };
+5 : ["x bardzo dobrze radzi sobie z rozumieniem dłuższego i bardziej złożonego tekstu oraz", "x potrafi zrozumieć ogólny sens dłuższej i bardziej złożonej leksykalnie wypowiedzi pisemnej oraz",
+	"potrafi wyszukać w tekście konkretne informacje i wyciągnąć z nich wnioski."] };
 
 
 var mister = "";
